@@ -1,0 +1,20 @@
+html body {
+    background: url(https://50-best.com/wp-content/uploads/2019/07/avengers_wallpaper_b_10-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.display-2 {
+    color: rgb(250, 242, 242);
+    font-weight: bold;
+}
+
+h2 {
+    color: white;
+}
+
+label {
+    color: rgb(210, 210, 226);
+    font-weight: 800;
+}
