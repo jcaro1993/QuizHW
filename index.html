@@ -5,88 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./s.js">
 </head>
 
-
 <body>
-    <nav class="navbar bg-dark">
+    <nav class="navbar bg-light">
         <button class="text-light mb-0 btn" id="highscore-button">High Scores</button>
         <div class="text-light" id="time-display">00</div>
     </nav>
-    <div class="container m-5 mx-auto" id="main-container">
-        <div class="row m-2">
-            <div class="col text-center">
-                <div class="display-2">The Avenger Quiz</div>
-            </div>
+
+    <div id="main">
+
+        <!-- open main div -->
+        <div id="header">
+            <!-- open header div -->
+            <h1>The Avengers Quiz</h1>
         </div>
-        <div class="row m-2">
-            <div class="col text-center">
-                <button class="btn btn-primary btn-lg" id="start-button">Start Game</button>
-            </div>
-        </div>
+        <!-- close header div -->
+
+        <form id="form1">
+
+            <h2>What is the name of Thor's hammer?</h2>
+            <label for="Vanir"><input type="radio" name="Hammer" value="0" id="Vanir" />Vanir.</label>
+            <label for="Mjolnir"><input type="radio" name="Hammer" value="25" id="Mjolnir" />Mjolnir.</label>
+            <label for="Assir"><input type="radio" name="Hammer" value="0" id="Assir" />Assir.</label>
+            <label for="Norn"><input type="radio" name="Hammer" value="0" id="Norn" />Norn.</label>
+
+
+            <h2>What is Captain America's shield made off?</h2>
+            <label for="Vib"><input type="radio" name="shield" value="25" id="vib"/>Vibranium.</label>
+            <label for="adam"><input type="radio" name="shield" value="0" id="adam"/>Adamantuin.</label>
+            <label for="prom"><input type="radio" name="shield" value="0" id="prom" />Promethium</label>
+            <label for="carb"><input type="radio" name="shield" value="0" id="carb" />Carbonadium.</label>
+
+
+            <h2>Who wears the Infinity Stones and snaps out Thanos and his army?</h2>
+            <label for="Hul"><input type="radio" name="stone" value="0" id="Hul" />Hulk.</label>
+            <label for="Iron"><input type="radio" name="stone" value="25" id="Iron" />Iron Man.</label>
+            <label for="Tho"><input type="radio" name="stone" value="0" id="Tho" />Thor</label>
+            <label for="Vis"><input type="radio" name="stone" value="0" id="Vis" />Vision.</label>
+
+
+            <h2>Where is the Black Panther from?</h2>
+            <label for="Savage"><input type="radio" name="panther" value="0" id="Savage" />Savage land.</label>
+            <label for="asg"><input type="radio" name="panther" value="0" id="asg" />Asgard.</label>
+            <label for="skull"><input type="radio" name="panther" value="0" id="skull" />Skull Island</label>
+            <label for="waka"><input type="radio" name="panther"  value="25" id="waka" />Wakanda.</label>
+
+            <button type="submit" value="Submit">Submit</button>
+
+        </form>
+
+
+
+        <p>Your grade is: <span id="grade">__</span></p>
+        <p id="grade2"></p>
     </div>
 
+    <!-- close main div -->
+
+    <script>
+        document.getElementById("form1").onsubmit = function() {
+            Hammer = parseInt(document.querySelector('input[name = "Hammer"]:checked').value);
+            shield = parseInt(document.querySelector('input[name = "shield"]:checked').value);
+            stone = parseInt(document.querySelector('input[name = "stone"]:checked').value);
+            panther = parseInt(document.querySelector('input[name = "panther"]:checked').value);
 
 
-    <form id="form1">
+            result = Hammer + shield + stone + panther
 
-        <h2>What is the name of Thor's hammer?</h2>
-        <label><input type="radio"  value="0" id="Vanir" />Vanir.</label>
-        <label><input type="radio"  value="25" id="Mjolnir" />Mjolnir.</label>
-        <label><input type="radio"  value="0" id="Aesir" />Aesir.</label>
-        <label><input type="radio"  value="0" id="Norn"/>Norn.</label>
-
-        <h2>What is Captain America's shield made off?</h2>
-        <label><input type="radio"  value="25" id="Vibranium"/>Vibranium.</label>
-        <label><input type="radio"  value="0" id="Adamantuin"/>Adamantuin.</label>
-        <label><input type="radio"  value="0" id="Promethium" />Promethium.</label>
-        <label><input type="radio"  value="0" id="Carbonadium" />Carbonadium.</label>
-
-        <h2>Who wears the Infinity Stones and snaps out Thanos and his army?</h2>
-        <label><input type="radio"  value="0" id="Hulk" />Hulk.</label>
-        <label><input type="radio"  value="25" id="Iron" />Iron Man.</label>
-        <label><input type="radio"  value="0" id="Thor" />Thor</label>
-        <label><input type="radio"  value="0" id="cap" />Captain America.</label>
-
-        <h2>Where is the Black Panther from?</h2>
-        <label><input type="radio"  value="0" id="Savage" />Savage land.</label>
-        <label><input type="radio"  value="0" id="Skull" />Skull Island</label>
-        <label><input type="radio"  value="0" id="Asgard" />Asgard</label>
-        <label><input type="radio"  value="25" id="Wakanda" />Wakanda.</label>
-        <br>
-        <br>
-        <button type="submit " value="Submit ">Submit</button>
-
-    </form>
-
-
-
-    <!-- 
-
-    <div class="qcontainer " id="myQuestion ">
-        <button class="choice-Btn " id="button-1 ">one</button>
-        <button class="choice-Btn " id="button-2 ">two</button>
-        <button class="choice-Btn " id="button-3 ">three</button>
-        <button class="choice-Btn " id="button-4 ">four</button>
-
-
-    </div> -->
-
-    <div class="container ">
-        <div class="row m-2 ">
-            <div class="col ">
-                <p id="Display "></p>
-            </div>
-        </div>
-    </div>
-    <script src="./script.js ">
+            document.getElementById("grade").innerHTML = result;
+            return false;
+        };
     </script>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js " integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s " crossorigin="anonymous "></script>
 </body>
+
 
 </html>

@@ -1,20 +1,50 @@
-html body {
+body {
     background: url(https://50-best.com/wp-content/uploads/2019/07/avengers_wallpaper_b_10-1.jpg);
+    font-family: Helvetica;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.display-2 {
-    color: rgb(250, 242, 242);
-    font-weight: bold;
+#main {
+    width: 80%;
+    max-width: 950px;
+    border: 1px gray solid;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
-h2 {
+#header {
+    margin-top: 0;
+    height: 250px;
+    background: beige;
+    background-image: url("https://50-best.com/wp-content/uploads/2019/07/avengers_wallpaper_b_10-1.jpg");
+    background-position: center;
     color: white;
 }
 
 label {
-    color: rgb(210, 210, 226);
-    font-weight: 800;
+    display: block;
+}
+
+input {
+    width: 30px;
+    margin-left: 20px;
+}
+
+button {
+    width: 100px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: bold;
+}
+
+#time-light {
+    color: white;
 }
